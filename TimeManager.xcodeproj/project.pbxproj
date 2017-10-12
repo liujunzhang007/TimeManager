@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523CB8B81F8F685C00E03274 /* NSDateNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 523CB8B71F8F685C00E03274 /* NSDateNote.m */; };
 		529ED1A31E9E108400B2BE41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 529ED1A21E9E108400B2BE41 /* main.m */; };
 		529ED1A61E9E108400B2BE41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 529ED1A51E9E108400B2BE41 /* AppDelegate.m */; };
 		529ED1A91E9E108400B2BE41 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 529ED1A81E9E108400B2BE41 /* ViewController.m */; };
@@ -48,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		515EBB553BC5603533277A65 /* libPods-TimeManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimeManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		523CB8B61F8F685C00E03274 /* NSDateNote.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDateNote.h; sourceTree = "<group>"; };
+		523CB8B71F8F685C00E03274 /* NSDateNote.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDateNote.m; sourceTree = "<group>"; };
 		529ED19E1E9E108400B2BE41 /* TimeManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529ED1A21E9E108400B2BE41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		529ED1A41E9E108400B2BE41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				529ED1A81E9E108400B2BE41 /* ViewController.m */,
 				529ED1BE1E9E11BE00B2BE41 /* TabBarController.h */,
 				529ED1BF1E9E11BE00B2BE41 /* TabBarController.m */,
+				523CB8B61F8F685C00E03274 /* NSDateNote.h */,
+				523CB8B71F8F685C00E03274 /* NSDateNote.m */,
 				529ED1BB1E9E113600B2BE41 /* UIViewController */,
 				529ED1BC1E9E115200B2BE41 /* UIView */,
 				529ED1BD1E9E115900B2BE41 /* NSObject */,
@@ -416,6 +421,7 @@
 				529ED1A31E9E108400B2BE41 /* main.m in Sources */,
 				529ED1D41E9E37B700B2BE41 /* TimeModel.m in Sources */,
 				529ED1D11E9E376400B2BE41 /* TimeButton.m in Sources */,
+				523CB8B81F8F685C00E03274 /* NSDateNote.m in Sources */,
 				52C3C01F1E9F908700BF51AD /* CoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
