@@ -23,7 +23,7 @@
     return self;
 }
 - (void)configUI{
-    _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, TimeButtonWidth*34, TimeButtonHeight)];
+    _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 75*34, 100)];
     [self.contentView addSubview:_bottomView];
 }
 - (void)setDataWithModel:(TimeModel *)model{
@@ -32,10 +32,10 @@
         [_bottomView removeFromSuperview];
         _bottomView = nil;
     }
-    _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, TimeButtonWidth*34, TimeButtonHeight)];
+    _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 75*34, 100)];
     
     TimeButton *weekButton = [TimeButton buttonWithType:UIButtonTypeCustom];
-    weekButton.frame = CGRectMake(0, 0, TimeButtonWidth, TimeButtonHeight);
+    weekButton.frame = CGRectMake(0, 0, 75, 100);
 //    weekButton.backgroundColor = [UIColor colorTransferToRGB:@"#a1d7f4"];
     weekButton.backgroundColor = [UIColor colorTransferToRGB:@"#fffbe4"];
     weekButton.titleLabel.font = [UIFont systemFontOfSize:16];
@@ -72,7 +72,7 @@
             break;
     }
     [_bottomView addSubview:weekButton];
-    buttom_x+=TimeButtonWidth+1;
+    buttom_x+=75+1;
     
     NSDateComponents *comps = [NSDate getDateInfoWithDate:[NSDate date]];
     if (comps.weekday == 0) {
@@ -100,7 +100,7 @@
     [self.contentView addSubview:_bottomView];
     for (TimeModel *subModel in model.DataArray) {
         TimeButton *button = [TimeButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(buttom_x, 0, TimeButtonWidth, TimeButtonHeight);
+        button.frame = CGRectMake(buttom_x, 0, 75, 100);
         button.layer.cornerRadius = 7;
         button.layer.borderWidth = 1;
         button.layer.borderColor = [UIColor colorTransferToRGB:@"#eeeeee"].CGColor;
@@ -112,7 +112,7 @@
         button.titleLabel.font = [UIFont systemFontOfSize:15];
         button.backgroundColor = [UIColor clearColor];
         [button addTarget:self action:@selector(TimeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-        buttom_x+=TimeButtonWidth;
+        buttom_x+=75;
         
         UIView *backView = [[UIView alloc]initWithFrame:button.frame];
         backView.backgroundColor = [UIColor whiteColor];
@@ -125,7 +125,7 @@
         
         [_bottomView addSubview:button];
     }
-    _bottomView.frame = CGRectMake(0, 0, buttom_x+TimeButtonWidth+1, TimeButtonHeight);
+    _bottomView.frame = CGRectMake(0, 0, buttom_x+75+1, 100);
 }
 
 - (void)TimeButtonAction:(TimeButton *)button{

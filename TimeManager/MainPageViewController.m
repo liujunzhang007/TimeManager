@@ -85,20 +85,20 @@ UITableViewDataSource
         _mainScorllView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 20, kScreenWidth, kScreenHeight)];
         _mainScorllView.bounces = NO;
         _mainScorllView.backgroundColor = [UIColor clearColor];
-        _GridView  = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, TimeButtonWidth*(34+1), kScreenHeight-self.tabBarController.tabBar.frame.size.height-20) style:UITableViewStylePlain];
+        _GridView  = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 75*(34+1), kScreenHeight-self.tabBarController.tabBar.frame.size.height-20) style:UITableViewStylePlain];
         _GridView.backgroundColor = [UIColor clearColor];
         _GridView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _GridView.delegate = self;
         _GridView.dataSource = self;
         _GridView.bounces = NO;
         [_mainScorllView addSubview:_GridView];
-//        _mainScorllView.contentSize = CGSizeMake(TimeButtonWidth*(34+1)+35, kScreenHeight-64);
+//        _mainScorllView.contentSize = CGSizeMake(75*(34+1)+35, kScreenHeight-64);
         _mainScorllView.contentSize = _GridView.frame.size;
         [self.view addSubview:_mainScorllView];
     }
     if (_FunctionDot == nil) {
         _FunctionDot = [UIButton buttonWithType:UIButtonTypeCustom];
-        _FunctionDot.frame = CGRectMake(kScreenWidth-50, kScreenHeight-TimeButtonHeight-25-44, 50, 50);
+        _FunctionDot.frame = CGRectMake(kScreenWidth-50, kScreenHeight-100-25-44, 50, 50);
         _FunctionDot.backgroundColor = [UIColor blackColor];
         _FunctionDot.layer.cornerRadius = 10;
         _FunctionDot.alpha = 0.4;
@@ -141,7 +141,7 @@ UITableViewDataSource
     return _dataArray.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return TimeButtonHeight;
+    return 100;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.0000001;
@@ -158,7 +158,7 @@ UITableViewDataSource
         [_timeLabelView removeFromSuperview];
         _timeLabelView = nil;
     }
-    _timeLabelView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, TimeButtonWidth*(34+1)+35, 50)];
+    _timeLabelView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 75*(34+1)+35, 50)];
     _timeLabelView.backgroundColor = [UIColor colorTransferToRGB:@"#fffbe4"];
     //当前时间
     NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
@@ -167,7 +167,7 @@ UITableViewDataSource
     NSTimeInterval currentInterval = [currentDate timeIntervalSince1970];
     
     TimeModel *model = _dataArray.firstObject;
-    UILabel *timeLabelEmpty = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, TimeButtonWidth, 50)];
+    UILabel *timeLabelEmpty = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 75, 50)];
     timeLabelEmpty.backgroundColor = [UIColor clearColor];
     timeLabelEmpty.layer.borderWidth = 1;
     timeLabelEmpty.numberOfLines = 0;
@@ -177,7 +177,7 @@ UITableViewDataSource
     timeLabelEmpty.textColor = [UIColor colorTransferToRGB:@"#333333"];
     timeLabelEmpty.textAlignment = NSTextAlignmentCenter;
     [_timeLabelView addSubview:timeLabelEmpty];
-    CGFloat timeLabel_x = TimeButtonWidth;
+    CGFloat timeLabel_x = 75;
     
     //初始化开始时间
     NSString *HHmm = @"7:00";
@@ -198,8 +198,8 @@ UITableViewDataSource
         NSDate * datedown = [NSDate dateWithTimeIntervalSince1970:timeInterval];
         NSString * dateStringdown = [formatter stringFromDate:datedown];//结束时间
         
-        UILabel *timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(timeLabel_x, 0, TimeButtonWidth, 50)];
-        timeLabel_x+=TimeButtonWidth;
+        UILabel *timeLabel = [[UILabel alloc]initWithFrame:CGRectMake(timeLabel_x, 0, 75, 50)];
+        timeLabel_x+=75;
         timeLabel.backgroundColor = [UIColor clearColor];
         timeLabel.layer.borderWidth = 1;
         timeLabel.layer.borderColor = [UIColor colorTransferToRGB:@"#eeeeee"].CGColor;
