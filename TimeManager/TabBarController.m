@@ -32,7 +32,7 @@
     settingPage.tabBarItem.image = [UIImage imageNamed:setting];
     UINavigationController *settingPageNav = [[UINavigationController alloc]initWithRootViewController:settingPage];
 
-    [[UITabBar appearance] setBarTintColor:[UIColor colorTransferToRGB:@"#fffbe4"]];
+//    [[UITabBar appearance] setBarTintColor:[UIColor colorTransferToRGB:@"#fffbe4"]];
     
     self.viewControllers = @[mainPageNav,settingPageNav];
 }

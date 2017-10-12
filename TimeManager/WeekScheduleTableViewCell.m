@@ -37,14 +37,14 @@
     TimeButton *weekButton = [TimeButton buttonWithType:UIButtonTypeCustom];
     weekButton.frame = CGRectMake(0, 0, 75, 100);
 //    weekButton.backgroundColor = [UIColor colorTransferToRGB:@"#a1d7f4"];
-    weekButton.backgroundColor = [UIColor colorTransferToRGB:@"#fffbe4"];
+//    weekButton.backgroundColor = [UIColor colorTransferToRGB:@"#fffbe4"];
     weekButton.titleLabel.font = [UIFont systemFontOfSize:16];
     weekButton.titleLabel.numberOfLines = 0;
     weekButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     weekButton.alpha = 0.8;
-    weekButton.layer.borderColor = [UIColor colorTransferToRGB:@"#eeeeee"].CGColor;
+//    weekButton.layer.borderColor = [UIColor colorTransferToRGB:@"#eeeeee"].CGColor;
     weekButton.layer.borderWidth = 1;
-    [weekButton setTitleColor:[UIColor colorTransferToRGB:@"#333333"] forState:UIControlStateNormal];
+//    [weekButton setTitleColor:[UIColor colorTransferToRGB:@"#333333"] forState:UIControlStateNormal];
     TimeModel *firstModel = model.DataArray.firstObject;
     switch (firstModel.section) {
         case 0:
@@ -103,9 +103,9 @@
         button.frame = CGRectMake(buttom_x, 0, 75, 100);
         button.layer.cornerRadius = 7;
         button.layer.borderWidth = 1;
-        button.layer.borderColor = [UIColor colorTransferToRGB:@"#eeeeee"].CGColor;
+//        button.layer.borderColor = [UIColor colorTransferToRGB:@"#eeeeee"].CGColor;
         [button setTitle:subModel.textTitle forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor colorTransferToRGB:@"#33333"] forState:UIControlStateNormal];
+//        [button setTitleColor:[UIColor colorTransferToRGB:@"#33333"] forState:UIControlStateNormal];
         button.text = subModel.textTitle;
         button.section = subModel.section;
         button.item = subModel.item;

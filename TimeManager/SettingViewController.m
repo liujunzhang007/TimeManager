@@ -20,7 +20,7 @@
     self.automaticallyAdjustsScrollViewInsets=YES;
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorTransferToRGB:@"#fffbe4"]];
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor colorTransferToRGB:@"#fffbe4"]];
 
 }
 

@@ -39,7 +39,7 @@ UITableViewDataSource
     self.automaticallyAdjustsScrollViewInsets=YES;
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = NO;
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorTransferToRGB:@"#fffbe4"]];
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor colorTransferToRGB:@"#fffbe4"]];
     self.navigationController.navigationBar.hidden=YES;
     
     UIImageView *backGroundImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-64)];
@@ -48,7 +48,7 @@ UITableViewDataSource
     [self.view addSubview:backGroundImage];
     
     UIView *stateBarView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 20)];
-    stateBarView.backgroundColor = [UIColor colorTransferToRGB:@"#fffbe4"];
+//    stateBarView.backgroundColor = [UIColor colorTransferToRGB:@"#fffbe4"];
     [self.view addSubview:stateBarView];
     
     _TimePartPerDay = 34;
@@ -159,7 +159,7 @@ UITableViewDataSource
         _timeLabelView = nil;
     }
     _timeLabelView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 75*(34+1)+35, 50)];
-    _timeLabelView.backgroundColor = [UIColor colorTransferToRGB:@"#fffbe4"];
+//    _timeLabelView.backgroundColor = [UIColor colorTransferToRGB:@"#fffbe4"];
     //当前时间
     NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd"]; // 年-月-日
@@ -171,10 +171,10 @@ UITableViewDataSource
     timeLabelEmpty.backgroundColor = [UIColor clearColor];
     timeLabelEmpty.layer.borderWidth = 1;
     timeLabelEmpty.numberOfLines = 0;
-    timeLabelEmpty.layer.borderColor = [UIColor colorTransferToRGB:@"#eeeeee"].CGColor;
+//    timeLabelEmpty.layer.borderColor = [UIColor colorTransferToRGB:@"#eeeeee"].CGColor;
     timeLabelEmpty.text = [NSString stringWithFormat:@"第%ld周\n%@",[NSDate getDateInfoWithDate:nil].weekOfYear,[formatter stringFromDate:currentDate]];
     timeLabelEmpty.font = [UIFont boldSystemFontOfSize:10];
-    timeLabelEmpty.textColor = [UIColor colorTransferToRGB:@"#333333"];
+//    timeLabelEmpty.textColor = [UIColor colorTransferToRGB:@"#333333"];
     timeLabelEmpty.textAlignment = NSTextAlignmentCenter;
     [_timeLabelView addSubview:timeLabelEmpty];
     CGFloat timeLabel_x = 75;
@@ -202,7 +202,7 @@ UITableViewDataSource
         timeLabel_x+=75;
         timeLabel.backgroundColor = [UIColor clearColor];
         timeLabel.layer.borderWidth = 1;
-        timeLabel.layer.borderColor = [UIColor colorTransferToRGB:@"#eeeeee"].CGColor;
+//        timeLabel.layer.borderColor = [UIColor colorTransferToRGB:@"#eeeeee"].CGColor;
         if (currentInterval>[dateup timeIntervalSince1970]&&currentInterval<=[datedown timeIntervalSince1970]) {
             timeLabel.layer.borderColor = [UIColor redColor].CGColor;
             timeLabel.layer.borderWidth = 2;
